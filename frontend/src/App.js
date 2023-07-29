@@ -40,6 +40,12 @@ export const newsfeedListState = atom({
   default: [],
 });
 
+const api = axios.create({
+  baseURL: 'http://192.168.88.21:8000',
+});
+
+export default api;
+
 function App() {
   const [apikeyLoaded, setApikeyLoaded] = useState(false);
   const [modulesLoaded, setModulesLoaded] = useState(false);
